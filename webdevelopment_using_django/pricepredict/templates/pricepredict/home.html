@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head><title>Price Prediction for Second hand Bikes</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+<p style='font-size:20px'>In this site, you can predict the price of second-hand bikes. Please provide the below info and click Submit!</p>
+
+<form action="" method="post">
+  {% csrf_token %}
+  <label for="bikeslist">Choose a Bike Model:</label>
+  <select id="bikeslist" name="bikeslist">
+    <option value="Pulsar 150">Pulsar 150</option>
+    <option value="Dio">Dio</option>
+    <option value="Pulsar 220F">Pulsar 220F</option>
+    <option value="Aviator">Aviator</option>
+    <option value="Duke 200">Duke 200</option>
+    <option value="Duke 250">Duke 250</option>
+    <option value="Benelli TnT 300">Benelli TNT 300</option>
+    <option value="Hornet 160r">Hornet 160r</option>
+    <option value="FZ 250">FZ 250</option>
+    <option value="Duke 390">Duke 390</option>
+    <option value="Pulsar RS 200">Pulsar RS 200</option>
+    <option value="Super Splendor">Super Splendor</option>
+    <option value="Benelli 302 R">Benelli 302 R</option>
+    <option value="Aprilia SR 150">Aprilia SR 150</option>
+    <option value="Yamaha Ray ZR">Yamaha Ray ZR</option>
+    <option value="FZ 150">FZ 150</option>
+  </select>
+  <p>
+    <label for="lotno">Lot No.:</label>
+    <input type="text" id="lotno" name="lotno">
+  </p>
+  <p>
+    <label for="kilometers">Kilometers:</label>
+    <input type="text" id="kilometers" name="kilometers">
+  </p>
+  <p>
+    <input type="submit">
+  </p>
+ </form>
+
+<p>
+{% if Result %}
+  <h3>Estimated Price is Rs. {{Result}}</h3>
+</p>
+{% endif %}
+
+</body>
+</html>
