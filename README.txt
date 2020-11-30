@@ -33,6 +33,6 @@ Step7: Building a docker image and running it
 
 In this way, a model was created to predict the price of second-hand bikes.
 
-Note- Refer to the screenshots folder in order to view the some of the results.
+Note- Refer to the screenshots folder in order to view some of the results.
 
  
